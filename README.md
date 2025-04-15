@@ -34,3 +34,63 @@
 **आइए, भाषा संरक्षण की इस यात्रा में एक वाक्य से शुरुआत करें।**
 
 ---
+
+## 🛠️ Bhashamitra: Project Setup & Run Guide
+
+This project consists of notebooks, translation models, and a React-based frontend powered by **Vite**.
+
+### ✅ Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** (v18+ recommended): [Install Node.js](https://nodejs.org/)
+- **npm** (comes with Node.js)
+- **Python 3.8+**
+- **Jupyter or VS Code (optional)** for working with `.ipynb` notebooks
+
+---
+
+## 🚀 Running the Frontend
+
+1. **Navigate to the frontend directory**:
+   ```bash
+   cd Bhashamitra/frontend
+   ```
+
+2. **Install dependencies** (run this once):
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. Open the app in your browser:
+   - Usually runs at `http://localhost:5173/` or `http://localhost:5174/`
+   - If port 5173 is busy, Vite will automatically use the next available port.
+
+---
+
+## 🧠 Working with Translation Models
+
+The notebooks in the root folder are for training/evaluation using **MBART** or other models.
+
+### Notebooks:
+
+- `translate_mbart.ipynb` – Core translation logic using MBART
+- `hin-bhoj.ipynb` – Hindi to Bhojpuri specific model
+- `dataset_prep.ipynb` – Preprocess your dataset for training
+- `machine_translation_demo.ipynb` – Demo notebook for trying out translations
+- `eval.csv` – Evaluation data
+
+You can run them using:
+
+```bash
+jupyter notebook
+```
+
+or open them in **VS Code** with the Jupyter extension.
+
+---
