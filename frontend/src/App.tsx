@@ -26,6 +26,9 @@ export default function BhasamitraWebsite() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [characterCount, setCharacterCount] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
   
   const dialects = [
     { id: 'awadhi', name: 'Awadhi (अवधी)' },
@@ -49,12 +52,35 @@ export default function BhasamitraWebsite() {
     setShowDropdown(false);
   };
 
-  const handleConvert = () => {
-    // In a real app, this would call an API to do the conversion
-    // Here we'll just simulate a conversion for display purposes
-    const sample = `This is your text translated to ${selectedDialect}. In a real application, an AI model would handle this translation.`;
-    setOutputText(sample);
-  };
+  const handleConvert = async () => {
+  setLoading(true);
+  setError('');
+  setOutputText('');
+  try {
+    const response = await fetch('https://0785-34-91-168-54.ngrok-free.app/translate', {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        text: inputText,
+        dialect: selectedDialect
+      })
+    });
+    if (!response.ok) {
+      throw new Error('Translation failed. Please try again.');
+    }
+    const data = await response.json();
+    setOutputText(data.translation || 'No translation found.');
+  } catch (err) {
+    setError(err.message || 'An error occurred.');
+  } finally {
+    setLoading(false);
+  }
+};
+
+
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
@@ -241,7 +267,10 @@ export default function BhasamitraWebsite() {
                 <span>Convert</span>
               </button>
             </div>
-            
+           
+	    {loading && <p className="text-center text-indigo-600">Translating...</p>}
+{error && <p className="text-center text-red-600">{error}</p>}
+
             {outputText && (
               <div className="bg-indigo-50 border border-indigo-100 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-indigo-800 mb-3">
