@@ -64,7 +64,7 @@ export default function BhasamitraWebsite() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <Globe2 className="h-8 w-8" />
-              <span className="text-2xl font-bold">Bhasamitra</span>
+              <span className="text-2xl font-bold">Bhashamitra</span>
             </div>
             
             {/* Desktop Navigation */}
@@ -136,7 +136,7 @@ export default function BhasamitraWebsite() {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                <span className="block">Bhasamitra</span>
+                <span className="block">Bhashamitra</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300">
                   हिंदी डायलेक्ट कन्वर्टर
                 </span>
@@ -264,7 +264,7 @@ export default function BhasamitraWebsite() {
               <div className="mb-6">
                 <h3 className="text-2xl font-semibold text-indigo-700 mb-3">Bhasamitra - Preserving India's Linguistic Heritage</h3>
                 <p className="text-gray-700 mb-4">
-                  Bhasamitra is an AI-powered platform that facilitates the conversion of standard Hindi into various regional dialects. Our mission is to preserve and promote India's rich linguistic diversity in the digital era.
+                  Bhashamitra is an AI-powered platform that facilitates the conversion of standard Hindi into various regional dialects. Our mission is to preserve and promote India's rich linguistic diversity in the digital era.
                 </p>
                 <p className="text-gray-700 mb-4">
                   Our AI model has been trained to understand the grammar, vocabulary, and sentence structure of regional dialects such as Awadhi, Bagheli, Bhojpuri, Haryanvi, Bundeli, and Chattisgarhi. It not only translates words but also maintains cultural and regional nuances.
@@ -336,7 +336,7 @@ export default function BhasamitraWebsite() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Globe2 className="h-8 w-8" />
-                <span className="text-2xl font-bold">Bhasamitra</span>
+                <span className="text-2xl font-bold">Bhashamitra</span>
               </div>
               <p className="text-gray-400 mb-4">
                 भाषा के संरक्षण के लिए समर्पित - Dedicated to the preservation of language diversity
@@ -404,7 +404,7 @@ export default function BhasamitraWebsite() {
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-            <p>&copy; 2025 Bhasamitra - सभी अधिकार सुरक्षित (All Rights Reserved)</p>
+            <p>&copy; 2025 Bhashamitra - सभी अधिकार सुरक्षित (All Rights Reserved)</p>
           </div>
         </div>
       </footer>
